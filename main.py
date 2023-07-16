@@ -3,13 +3,16 @@ import random
 from art import logo
 from utils import clear_terminal
 
+HARD_LEVEL_ATTEMPTS = 5
+EASY_LEVEL_ATTEMPTS = 10
+
 def choose_difficulty():
     '''Based on user input returns number of attempts'''
     choice = input("Choose a difficulty. Type 1 for easy or 2 for hard: > ")
     if choice == "1":
-        attempts = 10
+        attempts = EASY_LEVEL_ATTEMPTS
     elif choice == "2":
-        attempts = 5
+        attempts = HARD_LEVEL_ATTEMPTS
     else:
         attempts = 0
     return attempts
